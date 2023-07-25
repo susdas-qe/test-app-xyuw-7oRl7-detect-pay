@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: nodejs-no-dockerfile-vyvo
+spec:
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/susdas_quay_org/build-e2e-qfta-tenant/test-app-xyuw/nodejs-no-dockerfile-vyvo@sha256:b48eab04f6c39abb8bc46e9803e106408c2e4894c3a179a19d83af001052541d
+        name: my-nodejs
+        resources: {}
+status: {}
