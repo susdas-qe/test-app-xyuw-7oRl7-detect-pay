@@ -25,7 +25,7 @@ spec:
         app.kubernetes.io/instance: nodejs-no-dockerfile-vyvo
     spec:
       containers:
-      - image: nodejs-image:latest
+      - image: quay.io/susdas_quay_org/build-e2e-qfta-tenant/test-app-xyuw/nodejs-no-dockerfile-vyvo@sha256:b48eab04f6c39abb8bc46e9803e106408c2e4894c3a179a19d83af001052541d
         name: my-nodejs
         ports:
         - containerPort: 3001
