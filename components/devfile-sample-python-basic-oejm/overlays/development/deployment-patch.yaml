@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: devfile-sample-python-basic-oejm
+spec:
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/susdas_quay_org/build-e2e-qfta-tenant/test-app-xyuw/devfile-sample-python-basic-oejm@sha256:d2ec95f185c4ceac4c167e96b7f6c1143678b7d562ebc80df0a0561997489f56
+        name: my-python
+        resources: {}
+status: {}
