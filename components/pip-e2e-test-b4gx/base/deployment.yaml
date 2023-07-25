@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: pip-e2e-test-b4gx
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: pip-e2e-test-b4gx
+    app.kubernetes.io/part-of: test-app-xyuw
+  name: pip-e2e-test-b4gx
+spec:
+  replicas: 1
+  revisionHistoryLimit: 0
+  selector:
+    matchLabels:
+      app: pip-e2e-test
+      app.kubernetes.io/instance: pip-e2e-test-b4gx
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: pip-e2e-test
+        app.kubernetes.io/instance: pip-e2e-test-b4gx
+    spec:
+      containers:
+      - image: pip-e2e-test:latest
+        name: pip-e2e-test
+        ports:
+        - containerPort: 8081
+        resources:
+          limits:
+            cpu: 500m
+            memory: 1Gi
+status: {}
