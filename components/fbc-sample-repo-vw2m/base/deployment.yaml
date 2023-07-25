@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: fbc-sample-repo-vw2m
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: fbc-sample-repo-vw2m
+    app.kubernetes.io/part-of: test-app-xyuw
+  name: fbc-sample-repo-vw2m
+spec:
+  replicas: 1
+  revisionHistoryLimit: 0
+  selector:
+    matchLabels:
+      app: fbc
+      app.kubernetes.io/instance: fbc-sample-repo-vw2m
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: fbc
+        app.kubernetes.io/instance: fbc-sample-repo-vw2m
+    spec:
+      containers:
+      - image: fbc:latest
+        name: fbc
+        ports:
+        - containerPort: 50051
+        resources:
+          limits:
+            cpu: 500m
+            memory: 1Gi
+          requests:
+            cpu: 100m
+            memory: 512Mi
+status: {}

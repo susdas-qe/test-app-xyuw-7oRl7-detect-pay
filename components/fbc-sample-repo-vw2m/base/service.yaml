@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: fbc-sample-repo-vw2m
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: fbc-sample-repo-vw2m
+    app.kubernetes.io/part-of: test-app-xyuw
+  name: fbc-sample-repo-vw2m
+spec:
+  ports:
+  - port: 50051
+    targetPort: 50051
+  selector:
+    app.kubernetes.io/instance: fbc-sample-repo-vw2m
+status:
+  loadBalancer: {}
